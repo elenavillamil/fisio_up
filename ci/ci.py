@@ -23,7 +23,7 @@ from collections import defaultdict
 class RestTests(unittest.TestCase):
    def test_setup(self):
       # Simple test to make sure the unit tester is working correctly.
-      pass
+      self.fail("error")
 
 ################################################################################
 # Main
