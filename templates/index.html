@@ -10,9 +10,19 @@
 <html>
    <head>
       <link href="{{ static_url('global.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{ static_url('index.css') }}" rel="stylesheet" type="text/css">
    </head>
-   
    <body>
+      <!-- -------------------------------------------------------------- -->
+      <!-- Body                                                           -->
+      <!-- -------------------------------------------------------------- -->
+      <div class="g_right_div">
+         <div class="g_menu_bar">
+            {% for title_menu_option in title_menu_options %}
+            <span>{{title_menu_option}}</span>
+            {% end %}
+         </div>
+      </div>
   
    </body>
 

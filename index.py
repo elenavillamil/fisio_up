@@ -2,11 +2,7 @@
 ################################################################################
 ################################################################################
 #
-# Module: ci.py
-#
-# Notes:
-#
-# Small script to automate running unit tests on each PR.
+# Module: index.py
 #
 ################################################################################
 ################################################################################
@@ -15,6 +11,8 @@ import os
 
 import tornado.ioloop
 import tornado.web
+
+import helpers
 
 from collections import defaultdict
 
@@ -26,17 +24,14 @@ template_path = os.path.join(os.path.dirname(__file__), "templates")
 static_path = template_path = os.path.join(os.path.dirname(__file__), "static")
 
 ################################################################################
-# Helper Functions
-################################################################################
-
-################################################################################
 # Handlers
 ################################################################################
 
 class MainHandler(tornado.web.RequestHandler):
    def get(self):
       self.render(
-         os.path.join("templates", "index.html")
+         os.path.join("templates", "index.html"),
+         title_menu_options=helpers.get_title_menu_options()
       )
 
 def make_app():
