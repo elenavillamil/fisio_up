@@ -2,32 +2,32 @@
 ################################################################################
 ################################################################################
 #
-# Module: ci.py
+# Module: helpers.py
 #
-# Notes:
+# Notes
 #
-# Small script to automate running unit tests on each PR.
+# A bunch of helper functions for the use of index.py
 #
 ################################################################################
 ################################################################################
-
-import os
-import unittest
 
 from collections import defaultdict
 
 ################################################################################
-# Unit Tests
+# Globals
 ################################################################################
 
-class RestTests(unittest.TestCase):
-   def test_setup(self):
-      # Simple test to make sure the unit tester is working correctly.
-      pass
+title_menu_options_file = "title_menu_options.txt"
 
 ################################################################################
-# Main
 ################################################################################
 
-if __name__ == "__main__":
-   unittest.main()
+def get_title_menu_options():
+   title_options = []
+
+   with open(title_menu_options_file) as file_handle:
+      for line in file_handle:
+         # Make sure the options do not have any new lines, or spaces.
+         title_options.append(line.strip())
+
+   return title_options
