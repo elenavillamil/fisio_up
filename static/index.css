@@ -32,12 +32,24 @@
 {
    height: 100%;
    font-family: wf_segoe-ui_normal,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif;
-   color: #4d3a2f;
+   color: #666666;
    width: 3em;
    text-align: center;
    display: table-cell;
    vertical-align: middle;
    cursor: default;
+}
+
+/* ************************************************************************** */
+/* =.g_menu_bar:hover > span                                                  */
+/*                                                                            */
+/* Notes: hover effect for menu items                                         */
+/* ************************************************************************** */
+
+.g_menu_bar > span:hover
+{
+   color: #111111;
+   cursor: pointer;
 }
 
 /* ************************************************************************** */
