@@ -55,8 +55,8 @@ class RestTests(unittest.TestCase):
             self.fail("%s Type: %s" % (error_str, type(menu_option)))
 
          if menu_option != menu_options_first_call[index]:
-            error_str = "Error, repeated calls to get_title_menu_options yielded"
-            error_str += " different results."
+            error_str = "Error. Repeated calls to get_title_menu_options"
+            error_str += " yielded different results."
             first = menu_options_first_call
             second = menu_options_second_call
 
